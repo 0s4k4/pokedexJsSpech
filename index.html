@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Pokedex</title>
+    <meta property="og:title" content="Pokedex" />
+    <!-- todo faltan etiqurtas meta og -->
+    <meta property="og:description" 
+  content="pokedex interactiva" />
+</head>
+<body>
+
+    <main class="pokedex" id="pokedex" tabindex="0">
+        <section class="pokedex-main" aria-label="Informacion general del pokemon">
+            <div class="header-shadow">
+                <div class="header">
+                    <span class="light is-big is-sky" id="light"></span>
+                    <span class="light is-red"></span>
+                    <span class="light is-yellow"></span>
+                    <span class="light is-green"></span>
+                </div>
+            </div>
+            <div class="screen">
+                <div class="screen-border">
+                    <div class="screen-safeArena" id="screen">
+                        <img src="" alt="" id="image">
+                    </div>
+                    <div class="button-container">
+                        <span class="red-button-1"></span>
+                        <span class="red-button-2"></span>
+                    </div>
+                    <div class="burguer">
+                        <img src="./images/button.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="variants">
+                    <div class="var-button">
+                        <button class="vbutton is-big" id="pokemonRandom"></button>
+                        <button class="vbutton"></button>
+                        <button class="vbutton is-secondary"></button>
+                    </div>
+                </div>
+                <form role="search" id="form" class="search">
+                    <input type="text" name="id" id="idInput" placeholder="quien es este pokemon" autocomplete="off">
+                </form>
+                <div class="description">
+                    <p id="description"> Busca un pokemon para obtener sus caracteristicas</p>
+                </div>
+                <div class="navigation">
+                    <button id="next-pokemon" class="navigation-right" aria-label="Siguiente Pokemon"></button>
+                    <button id="prev-pokemon" class="navigation-left" aria-label="Anterior Pokemon"></button>
+                    <button id="next-image" class="navigation-down" aria-label="Siguiente Imagen"></button>
+                    <button id="prev-image" class="navigation-up" aria-label="Imagen anterior"></button>
+                </div>
+            </div>
+        </section>
+        <div class="cover-front">
+            cover front
+        </div>
+        <section class="cover-back" aria-label="Estadistica del pokemon">
+            <div class="stats">
+                <canvas id="stats" width="200" height="200"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
+  <script src="./js/index.js" type="module"></script>
+</body>
+</html>
